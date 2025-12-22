@@ -5,7 +5,7 @@ import Projects from './pages/Projects'
 
 function App() {
   return (
-    <BrowserRouter basename="/profile">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
