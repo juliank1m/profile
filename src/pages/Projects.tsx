@@ -18,7 +18,7 @@ const projects = [
     description: 'A website prototype built with JavaScript.',
     tags: ['JavaScript', 'Web'],
     github: 'https://github.com/juliank1m/gyl-website-prototype',
-    liveDemo: undefined as string | undefined,
+    liveDemo: '/projects/gyl-prototype-project',
   },
   // Add more projects here...
 ]
