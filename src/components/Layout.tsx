@@ -10,9 +10,9 @@ export default function Layout() {
       <div className="blob blob-3"></div>
 
       <nav className="navbar">
-        <NavLink to="/" className="nav-logo">JK</NavLink>
+        <NavLink to="/homepage" className="nav-logo">JK</NavLink>
         <div className="nav-links">
-          <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} end>
+          <NavLink to="/homepage" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
             Home
           </NavLink>
           <NavLink to="/projects" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
