@@ -5,6 +5,14 @@ import './Projects.css'
 // You can add your projects here
 const projects = [
   {
+    id: 'portfolio-website',
+    title: 'Personal Portfolio Website',
+    description: 'A personal portfolio website showcasing my projects and skills, built with React and TypeScript.',
+    tags: ['React', 'TypeScript', 'Vite', 'Web'],
+    github: 'https://github.com/juliank1m/juliankim.github.io',
+    liveDemo: undefined as string | undefined,
+  },
+  {
     id: 'willowbrook-game',
     title: 'Willowbrook Game',
     description: 'A game project built with C#.',
