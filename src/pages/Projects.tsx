@@ -28,6 +28,14 @@ const projects = [
     github: 'https://github.com/juliank1m/gyl-website-prototype',
     liveDemo: '/projects/gyl-prototype-project',
   },
+  {
+    id: 'course-tools',
+    title: 'Course Tools',
+    description: 'A collection of helpful calculators and utilities for academic courses including linear algebra, calculus, chemistry, vector math, proofs, and CS tools.',
+    tags: ['React', 'TypeScript', 'Web', 'Math', 'Science'],
+    github: 'https://github.com/juliank1m/course-tools',
+    liveDemo: 'https://coursetools.juliankim.dev',
+  },
   // Add more projects here...
 ]
 
@@ -67,9 +75,20 @@ export default function Projects() {
                 </a>
               )}
               {project.liveDemo && (
-                <Link to={project.liveDemo} className="project-link project-link-demo">
-                  <ExternalLinkIcon /> Live Demo
-                </Link>
+                project.liveDemo.startsWith('http://') || project.liveDemo.startsWith('https://') ? (
+                  <a 
+                    href={project.liveDemo} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="project-link project-link-demo"
+                  >
+                    <ExternalLinkIcon /> Live Demo
+                  </a>
+                ) : (
+                  <Link to={project.liveDemo} className="project-link project-link-demo">
+                    <ExternalLinkIcon /> Live Demo
+                  </Link>
+                )
               )}
             </div>
           </article>
