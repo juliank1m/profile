@@ -3,6 +3,7 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import GylPrototype from './pages/GylPrototype'
+import CourseTools from './pages/CourseTools'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="homepage" element={<Home />} />
           <Route path="projects" element={<Projects />} />
           <Route path="projects/gyl-prototype-project" element={<GylPrototype />} />
+          <Route path="projects/course-tools-project" element={<CourseTools />} />
         </Route>
       </Routes>
     </BrowserRouter>
