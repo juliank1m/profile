@@ -34,7 +34,7 @@ const projects = [
     description: 'A collection of helpful calculators and utilities for academic courses including linear algebra, calculus, chemistry, vector math, proofs, and CS tools.',
     tags: ['React', 'TypeScript', 'Web', 'Math', 'Science'],
     github: 'https://github.com/juliank1m/course-tools',
-    liveDemo: 'https://coursetools.juliankim.dev',
+    liveDemo: '/projects/course-tools-project',
   },
   // Add more projects here...
 ]
