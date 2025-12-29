@@ -21,6 +21,14 @@ const projects = [
     liveDemo: undefined as string | undefined,
   },
   {
+    id: 'meow-meow-misses-home',
+    title: 'Meow-Meow-Misses-Home',
+    description: 'A MonoGame DesktopGL game project built with C#.',
+    tags: ['C#', 'MonoGame', 'Game Dev'],
+    github: 'https://github.com/juliank1m/Meow-Meow-Misses-Home',
+    liveDemo: undefined as string | undefined,
+  },
+  {
     id: 'gyl-website',
     title: 'GYL Website Prototype',
     description: 'A website prototype built with JavaScript.',
