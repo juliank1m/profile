@@ -15,8 +15,8 @@ const projects = [
   {
     id: 'willowbrook-game',
     title: 'Willowbrook Game',
-    description: 'A game project built with C#.',
-    tags: ['C#', 'Unity', 'Game Dev'],
+    description: 'A MonoGame DesktopGL game project built with C#.',
+    tags: ['C#', 'MonoGame', 'Game Dev'],
     github: 'https://github.com/juliank1m/willowbrook-game',
     liveDemo: undefined as string | undefined,
   },
