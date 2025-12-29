@@ -69,8 +69,8 @@ export default function Home() {
           <p>
             Beyond coursework, I enjoy working on projects that have real-world impact and 
             collaborating in team environments. I'm continuously learning new tools and 
-            technologies, and I'm motivated to grow as an engineer by building practical 
-            and well-designed projects.
+            technologies, and I'm currently exploring cloud computing and AWS. I'm motivated 
+            to grow as an engineer by building practical and well-designed projects.
           </p>
         </div>
       </section>
