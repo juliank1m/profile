@@ -17,9 +17,9 @@ export default function Home() {
           Hi, I'm <span className="name-highlight">Julian Kim</span>
         </h1>
         <p className="tagline">
-          First-year <span className="highlight-blue">Software Engineering</span> student at the{' '}
-          <span className="highlight-purple">University of Waterloo</span> interested in 
-          building reliable full-stack software.
+          First-year <strong className="highlight-blue">Software Engineering</strong> student at the{' '}
+          <strong className="highlight-purple">University of Waterloo</strong> passionate about 
+          building <strong>reliable full-stack software</strong> and solving real problems.
         </p>
         <div className="links">
           <a 
@@ -54,22 +54,22 @@ export default function Home() {
         </h2>
         <div className="about-card">
           <p>
-            I'm Julian, a first-year Software Engineering student at the University of 
-            Waterloo with a strong interest in building full-stack web applications and 
+            I'm Julian, a first-year <strong>Software Engineering</strong> student at the <strong>University of 
+            Waterloo</strong> with a strong interest in building <strong>full-stack web applications</strong> and 
             reliable software systems. I enjoy working across the full stack, from designing 
-            user interfaces to implementing backend logic and databases.
+            user interfaces to implementing <strong>backend logic</strong> and <strong>databases</strong>.
           </p>
           <p>
-            I've worked with technologies such as Python, C, Java, C#, React, Flask, and 
-            MySQL, and I'm particularly interested in writing clean, maintainable code and 
+            I've worked with technologies such as <strong>Python</strong>, <strong>C</strong>, <strong>Java</strong>, <strong>C#</strong>, <strong>React</strong>, <strong>Flask</strong>, and 
+            <strong>MySQL</strong>, and I'm particularly interested in writing <strong>clean, maintainable code</strong> and 
             understanding how systems work under the hood. Through both academic and personal 
-            projects, I've gained experience breaking down problems, designing structured 
-            solutions, and iterating based on feedback.
+            projects, I've gained experience <strong>breaking down problems</strong>, <strong>designing structured 
+            solutions</strong>, and iterating based on feedback.
           </p>
           <p>
-            Beyond coursework, I enjoy working on projects that have real-world impact and 
-            collaborating in team environments. I'm continuously learning new tools and 
-            technologies, and I'm currently exploring cloud computing and AWS. I'm motivated 
+            Beyond coursework, I enjoy working on projects that have <strong>real-world impact</strong> and 
+            collaborating in <strong>team environments</strong>. I'm continuously learning new tools and 
+            technologies, and I'm currently exploring <strong>cloud computing</strong> and <strong>AWS</strong>. I'm motivated 
             to grow as an engineer by building practical and well-designed projects.
           </p>
         </div>

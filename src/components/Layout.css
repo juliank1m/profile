@@ -28,9 +28,9 @@
   width: 1300px;
   height: 1300px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #7eb8da 0%, #b8a4c9 100%);
+  background: linear-gradient(135deg, #3182ce 0%, #805ad5 100%);
   animation: pulse 4s ease-in-out infinite;
-  opacity: 0.06;
+  opacity: 0.04;
   top: 38%;
   left: 18%;
 }
@@ -39,9 +39,9 @@
   width: 1500px;
   height: 900px;
   border-radius: 50px;
-  background: linear-gradient(135deg, #a8c5e2 0%, #c5b8e8 100%);
+  background: linear-gradient(135deg, #667eea 0%, #9f7aea 100%);
   animation: pulse 5s ease-in-out infinite 0.5s;
-  opacity: 0.06;
+  opacity: 0.04;
   top: 78%;
   left: 82%;
   --base-rotation: -18deg;
@@ -50,11 +50,11 @@
 .shape-3 {
   width: 1100px;
   height: 900px;
-  background: linear-gradient(135deg, #b8a4c9 0%, #d4c5e2 100%);
+  background: linear-gradient(135deg, #805ad5 0%, #b794f4 100%);
   clip-path: polygon(50% 3%, 97% 82%, 3% 82%);
   border-radius: 18%;
   animation: pulse 4.8s ease-in-out infinite 0.25s;
-  opacity: 0.06;
+  opacity: 0.04;
   top: 12%;
   left: 80%;
   --base-rotation: 15deg;
@@ -62,10 +62,10 @@
 
 @keyframes pulse {
   0%, 100% {
-    opacity: 0.04;
+    opacity: 0.03;
   }
   50% {
-    opacity: 0.12;
+    opacity: 0.08;
   }
 }
 
@@ -82,9 +82,10 @@
 }
 
 .nav-logo {
-  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #7eb8da 0%, #b8a4c9 100%);
+  background: linear-gradient(135deg, #3182ce 0%, #805ad5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -107,13 +108,14 @@
 }
 
 .nav-link:hover {
-  background: rgba(126, 184, 218, 0.1);
+  background: rgba(49, 130, 206, 0.08);
   color: var(--text-primary);
 }
 
 .nav-link.active {
-  background: linear-gradient(135deg, #e8f4fc 0%, #f0e8f8 100%);
-  color: #5a8cb8;
+  background: linear-gradient(135deg, #ebf8ff 0%, #faf5ff 100%);
+  color: #3182ce;
+  font-weight: 600;
 }
 
 /* Main content */
