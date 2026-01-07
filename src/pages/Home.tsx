@@ -3,9 +3,8 @@ import './Home.css'
 
 export default function Home() {
   const skills = [
-    { category: 'Languages', items: ['Python', 'C', 'Java', 'C#'], color: 'blue' },
-    { category: 'Frontend', items: ['React', 'HTML', 'CSS'], color: 'purple' },
-    { category: 'Backend', items: ['Flask', 'MySQL'], color: 'lavender' },
+    { category: 'Languages', items: ['Java', 'Python', 'C', 'C#', 'SQL', 'JavaScript', 'TypeScript', 'HTML/CSS'], color: 'blue' },
+    { category: 'Frameworks', items: ['React', 'Next.js', 'Flask', 'Scrum'], color: 'purple' },
   ]
 
   return (
@@ -28,7 +27,10 @@ export default function Home() {
             rel="noopener noreferrer"
             className="link-button link-github"
           >
-            <GitHubIcon /> GitHub
+            <span className="link-label">
+              <GitHubIcon /> GitHub
+            </span>
+            <span className="link-username">juliank1m</span>
           </a>
           <a 
             href="https://www.linkedin.com/in/juliank1m/" 
@@ -36,13 +38,19 @@ export default function Home() {
             rel="noopener noreferrer"
             className="link-button link-linkedin"
           >
-            <LinkedInIcon /> LinkedIn
+            <span className="link-label">
+              <LinkedInIcon /> LinkedIn
+            </span>
+            <span className="link-username">juliank1m</span>
           </a>
           <a 
             href="mailto:juliankim4321@gmail.com"
             className="link-button link-email"
           >
-            <EmailIcon /> Email
+            <span className="link-label">
+              <EmailIcon /> Email
+            </span>
+            <span className="link-username">juliankim4321@gmail.com</span>
           </a>
         </div>
       </section>
@@ -60,8 +68,8 @@ export default function Home() {
             user interfaces to implementing <strong>backend logic</strong> and <strong>databases</strong>.
           </p>
           <p>
-            I've worked with technologies such as <strong>Python</strong>, <strong>C</strong>, <strong>Java</strong>, <strong>C#</strong>, <strong>React</strong>, <strong>Flask</strong>, and 
-            <strong>MySQL</strong>, and I'm particularly interested in writing <strong>clean, maintainable code</strong> and 
+            I've worked with technologies such as <strong>Python</strong>, <strong>C</strong>, <strong>Java</strong>, <strong>C#</strong>, <strong>React</strong>, <strong>Flask</strong>, <strong>Next.js</strong>, and 
+            <strong> SQL databases</strong>. I'm particularly interested in writing <strong>clean, maintainable code</strong> and 
             understanding how systems work under the hood. Through both academic and personal 
             projects, I've gained experience <strong>breaking down problems</strong>, <strong>designing structured 
             solutions</strong>, and iterating based on feedback.
