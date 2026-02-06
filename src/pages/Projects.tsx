@@ -35,7 +35,6 @@ const projectRows: ProjectRow[] = [
         github: 'https://github.com/juliank1m/pyclimb',
         liveDemo: 'https://pyclimb.juliankim.dev/',
         previewSrc: 'https://pyclimb.juliankim.dev/',
-        previewBlocked: true,
         featureHighlights: [
           'Problem management: rich problem/test case models, difficulty/tag filters, solved/unsolved filters, admin inline editing, and function-call judge config.',
           'Submission system: verdict pipeline (AC/WA/RE/TLE/CE), per-test feedback, signed-in history, stdin/stdout + function-call modes, and judge timing.',
@@ -113,9 +112,9 @@ export default function Projects() {
               key={row.id}
               initial={{
                 opacity: 0,
-                x: index % 2 === 0 ? -80 : 80,
+                x: index % 2 === 0 ? -180 : 180,
                 y: 24,
-                rotate: index % 2 === 0 ? -2.5 : 2.5,
+                rotate: 0,
                 scale: 0.96,
               }}
               whileInView={{ opacity: 1, x: 0, y: 0, rotate: 0, scale: 1 }}
