@@ -45,12 +45,13 @@
 
 .project-motion {
   width: min(100%, 1200px);
-  justify-self: stretch;
+  justify-self: center;
 }
 
 .project-row {
   display: grid;
   grid-template-columns: 1fr;
+  width: 100%;
 }
 
 .project-row-duo {
@@ -62,8 +63,8 @@
   display: flex;
   flex-direction: column;
   min-height: 68vh;
-  transform: rotate(var(--tilt, 0deg));
-  transition: transform 140ms steps(2, end);
+  transform: none;
+  transition: transform 140ms steps(2, end), box-shadow 140ms steps(2, end);
 }
 
 .project-motion-duo .project-card {
@@ -74,10 +75,10 @@
   transform: translateY(-3px) rotate(var(--hover-tilt, 0deg));
 }
 
-.project-card-course-tools { background: #ecfbf7; border-color: #8adfce; --tilt: -0.85deg; --hover-tilt: -2.3deg; }
-.project-card-gyl-website { background: #ffeef2; border-color: #efc0d0; --tilt: 0.8deg; --hover-tilt: 2.1deg; }
-.project-card-willowbrook-game { background: #edf1ff; border-color: #b7c6f8; --tilt: -0.7deg; --hover-tilt: -1.95deg; }
-.project-card-meow-meow-misses-home { background: #f5fff1; border-color: #bde6a7; --tilt: 0.75deg; --hover-tilt: 2deg; }
+.project-card-course-tools { background: #ecfbf7; border-color: #8adfce; --hover-tilt: -2.3deg; }
+.project-card-gyl-website { background: #ffeef2; border-color: #efc0d0; --hover-tilt: 2.1deg; }
+.project-card-willowbrook-game { background: #edf1ff; border-color: #b7c6f8; --hover-tilt: -1.95deg; }
+.project-card-meow-meow-misses-home { background: #f5fff1; border-color: #bde6a7; --hover-tilt: 2deg; }
 
 .project-card .ui-card-description {
   min-height: 0;
