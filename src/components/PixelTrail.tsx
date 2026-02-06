@@ -101,11 +101,11 @@ function Scene({ gridSize, trailSize, maxAge, interpolate, easingFunction, pixel
   const size = useThree((state) => state.size)
   const viewport = useThree((state) => state.viewport)
 
-  const dotMaterial = useMemo(() => new DotMaterial(), [])
-
-  useEffect(() => {
-    dotMaterial.uniforms.pixelColor.value = new THREE.Color(pixelColor)
-  }, [dotMaterial, pixelColor])
+  const dotMaterial = useMemo(() => {
+    const material = new DotMaterial()
+    material.uniforms.pixelColor.value = new THREE.Color(pixelColor)
+    return material
+  }, [pixelColor])
 
   useEffect(() => {
     return () => {
@@ -120,16 +120,6 @@ function Scene({ gridSize, trailSize, maxAge, interpolate, easingFunction, pixel
     interpolate: interpolate || 0.1,
     ease: easingFunction || ((x: number) => x)
   }) as [THREE.Texture | null, (e: ThreeEvent<PointerEvent>) => void]
-
-  useEffect(() => {
-    if (!trail) return
-
-    trail.minFilter = THREE.NearestFilter
-    trail.magFilter = THREE.NearestFilter
-    trail.wrapS = THREE.ClampToEdgeWrapping
-    trail.wrapT = THREE.ClampToEdgeWrapping
-    trail.needsUpdate = true
-  }, [trail])
 
   const scale = Math.max(viewport.width, viewport.height) / 2
 

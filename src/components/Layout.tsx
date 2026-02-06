@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import PixelTrail from './PixelTrail'
 import './Layout.css'
@@ -8,12 +8,8 @@ const TRAIL_GRID_SIZE = 160
 
 export default function Layout() {
   const location = useLocation()
-  const [eventSource, setEventSource] = useState<HTMLElement | null>(null)
+  const eventSource = typeof document !== 'undefined' ? document.body : undefined
   const isProjectsRoute = location.pathname.startsWith('/projects')
-
-  useEffect(() => {
-    setEventSource(document.body)
-  }, [])
 
   useEffect(() => {
     document.body.classList.add('cursor-hidden')
@@ -37,7 +33,7 @@ export default function Layout() {
           interpolate={1.2}
           color="#c4dcff"
           canvasProps={{
-            eventSource: eventSource ?? undefined,
+            eventSource,
             eventPrefix: 'client',
             style: { pointerEvents: 'none' },
             dpr: [1, 1.5]
