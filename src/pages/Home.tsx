@@ -1,106 +1,100 @@
-import { GitHubIcon, LinkedInIcon, EmailIcon, SparklesIcon, CodeIcon } from '../components/Icons'
+import { Link } from 'react-router-dom'
+import { Badge } from '../components/ui/badge'
+import { ButtonLink } from '../components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card'
+import { Separator } from '../components/ui/separator'
+import { EmailIcon, GitHubIcon, LinkedInIcon, RocketIcon } from '../components/Icons'
 import './Home.css'
 
+const skills = ['React', 'TypeScript', 'Java', 'Python', 'SQL', 'C#', 'Flask', 'AWS (learning)']
+
+const strengths = [
+  {
+    title: 'Product-minded engineering',
+    body: 'I build with reliability and user outcomes in mind, from architecture choices to front-end clarity.',
+  },
+  {
+    title: 'End-to-end execution',
+    body: 'I am comfortable moving across frontend, backend, data design, and deployment to keep momentum high.',
+  },
+  {
+    title: 'Iterative delivery',
+    body: 'I prefer small, testable steps and measurable improvements over one large risky release.',
+  },
+]
+
+const highlights = [
+  { label: 'Projects shipped', value: '5+' },
+  { label: 'Primary stack', value: 'React + TS' },
+  { label: 'Focus area', value: 'Full-stack apps' },
+]
+
 export default function Home() {
-  const skills = [
-    { category: 'Languages', items: ['Java', 'Python', 'C', 'C#', 'SQL', 'JavaScript', 'TypeScript', 'HTML/CSS'], color: 'blue' },
-    { category: 'Frameworks', items: ['React', 'Next.js', 'Flask', 'Scrum'], color: 'purple' },
-  ]
-
   return (
-    <div className="home">
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-badge">Welcome</div>
-        <h1 className="name">
-          Hi, I'm <span className="name-highlight">Julian Kim</span>
-        </h1>
-        <p className="tagline">
-          First-year <strong className="highlight-blue">Software Engineering</strong> student at the{' '}
-          <strong className="highlight-purple">University of Waterloo</strong> passionate about 
-          building <strong>reliable full-stack software</strong> and solving real problems.
-        </p>
-        <div className="links">
-          <a 
-            href="https://github.com/juliank1m" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="link-button link-github"
-          >
-            <span className="link-label">
-              <GitHubIcon /> GitHub
-            </span>
-            <span className="link-username">juliank1m</span>
-          </a>
-          <a 
-            href="https://www.linkedin.com/in/juliank1m/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="link-button link-linkedin"
-          >
-            <span className="link-label">
-              <LinkedInIcon /> LinkedIn
-            </span>
-            <span className="link-username">juliank1m</span>
-          </a>
-          <a 
-            href="mailto:juliankim4321@gmail.com"
-            className="link-button link-email"
-          >
-            <span className="link-label">
-              <EmailIcon /> Email
-            </span>
-            <span className="link-username">juliankim4321@gmail.com</span>
-          </a>
-        </div>
+    <section className="home-page">
+      <Card className="hero-card">
+        <CardHeader className="hero-head">
+          <Badge tone="accent">Software Engineer in Progress</Badge>
+          <h1>Designing software that feels intentional, reliable, and production-ready.</h1>
+          <CardDescription>
+            I am Julian Kim, a Software Engineering student at the University of Waterloo building full-stack products with practical architecture and clear user value.
+          </CardDescription>
+        </CardHeader>
+
+        <CardContent className="hero-actions">
+          <ButtonLink href="https://github.com/juliank1m" target="_blank" rel="noopener noreferrer">
+            <GitHubIcon /> GitHub
+          </ButtonLink>
+          <ButtonLink href="https://www.linkedin.com/in/juliank1m/" target="_blank" rel="noopener noreferrer" variant="secondary">
+            <LinkedInIcon /> LinkedIn
+          </ButtonLink>
+          <ButtonLink href="mailto:juliankim4321@gmail.com" variant="outline">
+            <EmailIcon /> Email
+          </ButtonLink>
+          <Link to="/projects" className="ui-button ui-button-ghost ui-button-md">
+            <RocketIcon /> View projects
+          </Link>
+        </CardContent>
+      </Card>
+
+      <div className="skills-wrap" aria-label="Key skills">
+        {skills.map((skill) => (
+          <Badge key={skill} tone="muted">
+            {skill}
+          </Badge>
+        ))}
+      </div>
+
+      <section className="home-grid">
+        {strengths.map((item) => (
+          <Card key={item.title}>
+            <CardHeader>
+              <CardTitle>{item.title}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <CardDescription>{item.body}</CardDescription>
+            </CardContent>
+          </Card>
+        ))}
       </section>
 
-      {/* About Section */}
-      <section className="section">
-        <h2 className="section-title">
-          <span className="section-icon"><SparklesIcon /></span> About Me
-        </h2>
-        <div className="about-card">
-          <p>
-            I'm Julian, a first-year <strong>Software Engineering</strong> student at the <strong>University of 
-            Waterloo</strong> with a strong interest in building <strong>full-stack web applications</strong> and 
-            reliable software systems. I enjoy working across the full stack, from designing 
-            user interfaces to implementing <strong>backend logic</strong> and <strong>databases</strong>.
-          </p>
-          <p>
-            I've worked with technologies such as <strong>Python</strong>, <strong>C</strong>, <strong>Java</strong>, <strong>C#</strong>, <strong>React</strong>, <strong>Flask</strong>, <strong>Next.js</strong>, and 
-            <strong> SQL databases</strong>. I'm particularly interested in writing <strong>clean, maintainable code</strong> and 
-            understanding how systems work under the hood. Through both academic and personal 
-            projects, I've gained experience <strong>breaking down problems</strong>, <strong>designing structured 
-            solutions</strong>, and iterating based on feedback.
-          </p>
-          <p>
-            Beyond coursework, I enjoy working on projects that have <strong>real-world impact</strong> and 
-            collaborating in <strong>team environments</strong>. I'm continuously learning new tools and 
-            technologies, and I'm currently exploring <strong>cloud computing</strong> and <strong>AWS</strong>. I'm motivated 
-            to grow as an engineer by building practical and well-designed projects.
-          </p>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="section">
-        <h2 className="section-title">
-          <span className="section-icon"><CodeIcon /></span> Skills
-        </h2>
-        <div className="skills-grid">
-          {skills.map((skillGroup) => (
-            <div key={skillGroup.category} className={`skill-card skill-card-${skillGroup.color}`}>
-              <h3 className="skill-category">{skillGroup.category}</h3>
-              <div className="skill-items">
-                {skillGroup.items.map((skill) => (
-                  <span key={skill} className={`skill-tag skill-tag-${skillGroup.color}`}>{skill}</span>
-                ))}
-              </div>
+      <Card className="focus-card">
+        <CardHeader>
+          <CardTitle>Current direction</CardTitle>
+          <CardDescription>
+            I am actively looking for opportunities to contribute to production code, learn from strong engineering teams, and ship dependable software.
+          </CardDescription>
+        </CardHeader>
+        <Separator />
+        <CardContent className="highlights-grid">
+          {highlights.map((item) => (
+            <div key={item.label} className="highlight-item">
+              <span>{item.label}</span>
+              <strong>{item.value}</strong>
             </div>
           ))}
-        </div>
-      </section>
-    </div>
+        </CardContent>
+      </Card>
+    </section>
   )
 }
