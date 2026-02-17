@@ -5,9 +5,22 @@
   overflow: hidden;
 }
 
-body.cursor-hidden,
-body.cursor-hidden * {
-  cursor: none !important;
+body.cursor-custom,
+body.cursor-custom * {
+  cursor: url('../assets/cursor/arrow.png') 0 0, auto !important;
+}
+
+body.cursor-custom a,
+body.cursor-custom button,
+body.cursor-custom [role='button'],
+body.cursor-custom .site-link,
+body.cursor-custom input[type='button'],
+body.cursor-custom input[type='submit'],
+body.cursor-custom input[type='reset'],
+body.cursor-custom select,
+body.cursor-custom summary,
+body.cursor-custom label[for] {
+  cursor: url('../assets/cursor/link.png') 4 0, pointer !important;
 }
 
 .site-noise {
@@ -220,8 +233,8 @@ body.cursor-hidden * {
 }
 
 @media (max-width: 860px) {
-  body.cursor-hidden,
-  body.cursor-hidden * {
+  body.cursor-custom,
+  body.cursor-custom * {
     cursor: auto !important;
   }
 

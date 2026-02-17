@@ -17,7 +17,7 @@ export default function Layout() {
     const syncPointerMode = () => {
       const finePointer = mediaQuery.matches
       setIsFinePointerDevice(finePointer)
-      document.body.classList.toggle('cursor-hidden', finePointer)
+      document.body.classList.toggle('cursor-custom', finePointer)
     }
 
     syncPointerMode()
@@ -29,7 +29,7 @@ export default function Layout() {
     }
 
     return () => {
-      document.body.classList.remove('cursor-hidden')
+      document.body.classList.remove('cursor-custom')
 
       if (typeof mediaQuery.removeEventListener === 'function') {
         mediaQuery.removeEventListener('change', syncPointerMode)
