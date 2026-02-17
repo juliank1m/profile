@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import PixelTrail from './PixelTrail'
 import './Layout.css'
@@ -8,14 +8,34 @@ const TRAIL_GRID_SIZE = 160
 
 export default function Layout() {
   const location = useLocation()
+  const [isFinePointerDevice, setIsFinePointerDevice] = useState(false)
   const eventSource = typeof document !== 'undefined' ? document.body : undefined
   const isProjectsRoute = location.pathname.startsWith('/projects')
 
   useEffect(() => {
-    document.body.classList.add('cursor-hidden')
+    const mediaQuery = window.matchMedia('(hover: hover) and (pointer: fine)')
+    const syncPointerMode = () => {
+      const finePointer = mediaQuery.matches
+      setIsFinePointerDevice(finePointer)
+      document.body.classList.toggle('cursor-hidden', finePointer)
+    }
+
+    syncPointerMode()
+
+    if (typeof mediaQuery.addEventListener === 'function') {
+      mediaQuery.addEventListener('change', syncPointerMode)
+    } else {
+      mediaQuery.addListener(syncPointerMode)
+    }
 
     return () => {
       document.body.classList.remove('cursor-hidden')
+
+      if (typeof mediaQuery.removeEventListener === 'function') {
+        mediaQuery.removeEventListener('change', syncPointerMode)
+      } else {
+        mediaQuery.removeListener(syncPointerMode)
+      }
     }
   }, [])
 
@@ -25,21 +45,23 @@ export default function Layout() {
       <div className="site-pattern" aria-hidden="true" />
       <div className="site-glow site-glow-a" aria-hidden="true" />
       <div className="site-glow site-glow-b" aria-hidden="true" />
-      <div className="site-trail-layer" aria-hidden="true">
-        <PixelTrail
-          gridSize={TRAIL_GRID_SIZE}
-          trailSize={0.055}
-          maxAge={180}
-          interpolate={1.2}
-          color="#c4dcff"
-          canvasProps={{
-            eventSource,
-            eventPrefix: 'client',
-            style: { pointerEvents: 'none' },
-            dpr: [1, 1.5]
-          }}
-        />
-      </div>
+      {isFinePointerDevice ? (
+        <div className="site-trail-layer" aria-hidden="true">
+          <PixelTrail
+            gridSize={TRAIL_GRID_SIZE}
+            trailSize={0.055}
+            maxAge={180}
+            interpolate={1.2}
+            color="#c4dcff"
+            canvasProps={{
+              eventSource,
+              eventPrefix: 'client',
+              style: { pointerEvents: 'none' },
+              dpr: [1, 1.5]
+            }}
+          />
+        </div>
+      ) : null}
 
       <header className="topbar">
         <NavLink to="/homepage" className="brand">
