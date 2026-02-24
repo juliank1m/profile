@@ -3,7 +3,7 @@ import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import PixelTrail from './PixelTrail'
 import './Layout.css'
 
-const labels = ['Available for 2026 internships', 'Full-stack delivery', 'Waterloo SE']
+const labels = ["available for summer '26 internships", 'full stack | data science', 'software eng @ uwaterloo']
 const TRAIL_GRID_SIZE = 160
 
 export default function Layout() {
