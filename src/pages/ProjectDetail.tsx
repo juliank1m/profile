@@ -32,6 +32,11 @@ export default function ProjectDetail() {
         <a href={project.github} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-outline ui-button-sm">
           <GitHubIcon /> View code
         </a>
+        {project.githubExtra ? (
+          <a href={project.githubExtra.url} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-outline ui-button-sm">
+            <GitHubIcon /> {project.githubExtra.label}
+          </a>
+        ) : null}
         {project.liveDemo ? (
           <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="ui-button ui-button-default ui-button-sm">
             <ExternalLinkIcon /> Open live demo

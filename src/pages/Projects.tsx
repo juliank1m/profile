@@ -11,8 +11,8 @@ export default function Projects() {
   return (
     <section className="projects-page">
       <header className="projects-head">
-        <p>Selected Work</p>
-        <h1>Simple cards. Click any project for full details and live preview.</h1>
+        <p>Select Work</p>
+        <h1>Click any project for full details and live preview.</h1>
       </header>
 
       <div className="projects-grid projects-grid-simple">

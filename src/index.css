@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap');
 
 :root {
   --bg-0: #f9f7ff;
@@ -18,7 +18,7 @@
   --radius-md: 0;
   --radius-lg: 0;
 
-  font-family: 'VT323', monospace;
+  font-family: 'Pixelify Sans', monospace;
   line-height: 1.35;
   font-size: 22px;
   font-weight: 400;

@@ -9,6 +9,7 @@ export type Project = {
   previewSrc?: string
   previewBlocked?: boolean
   featureHighlights?: string[]
+  githubExtra?: { label: string; url: string }
   theme: 'mint' | 'rose' | 'indigo' | 'lime' | 'amber'
 }
 
@@ -33,6 +34,43 @@ export const projects: Project[] = [
     theme: 'mint',
   },
   {
+    id: 'vlr-data-pipeline-project',
+    title: 'VLR Data Pipeline',
+    summary:
+      'End-to-end data science pipeline analyzing ~47,000+ pro Valorant maps with ML models reaching ~95.9% accuracy.',
+    description:
+      'An end-to-end data science project that analyzes professional Valorant esports match data scraped from vlr.gg (~47,000+ competitive maps). Cleans and processes raw match, map, and player-level CSVs, engineers team-level differential features, and trains ML models to predict map outcomes.',
+    tags: ['Python', 'pandas', 'scikit-learn', 'Power BI', 'Matplotlib', 'Jupyter'],
+    github: 'https://github.com/juliank1m/vlr-data-pipeline',
+    featureHighlights: [
+      'Structured cleaning pipeline processing raw match, map, and player-level CSVs.',
+      'Feature engineering aggregating player stats to team-level metrics with 9 differential features (rating_diff, acs_diff, fk_diff, etc.).',
+      'Logistic Regression and Random Forest models achieving ~95.9% map outcome prediction accuracy.',
+      'Power BI dashboard for visualizing findings and key insights.',
+      'First Kill advantage boosts win probability from 33% to 79%; rating difference is the strongest overall predictor.',
+    ],
+    githubExtra: { label: 'View scraper', url: 'https://github.com/juliank1m/vlr-scraper' },
+    theme: 'indigo',
+  },
+  {
+    id: 'wannacram-project',
+    title: 'WannaCram',
+    summary:
+      'AI-powered study assistant that turns your lecture notes, slides, and exams into summaries, flashcards, and quizzes.',
+    description:
+      'A web app that helps students study smarter. Upload your lecture notes, slides, or past exams (PDF, DOCX, PPTX), and an AI study assistant will generate summaries, flashcards, and practice quizzes from your own course material — plus let you chat with your documents to get answers and explanations on demand.',
+    tags: ['Next.js', 'Supabase', 'PostgreSQL', 'OpenAI API'],
+    github: 'https://github.com/juliank1m/wannacram',
+    liveDemo: 'https://wannacram.juliankim.dev/',
+    previewSrc: 'https://wannacram.juliankim.dev/',
+    featureHighlights: [
+      'Upload lecture notes, slides, or past exams in PDF, DOCX, or PPTX format.',
+      'AI-generated summaries, flashcards, and practice quizzes from your own course material.',
+      'Chat with your documents to get answers and explanations on demand.',
+    ],
+    theme: 'rose',
+  },
+  {
     id: 'course-tools-project',
     title: 'Course Tools',
     summary: 'Calculators and utilities for linear algebra, calculus, chemistry, vectors, and CS.',
@@ -42,17 +80,6 @@ export const projects: Project[] = [
     liveDemo: 'https://coursetools.juliankim.dev',
     previewSrc: 'https://coursetools.juliankim.dev',
     theme: 'indigo',
-  },
-  {
-    id: 'gyl-prototype-project',
-    title: 'GYL Website Prototype',
-    summary: 'Frontend prototype centered on visual storytelling and interaction-first sections.',
-    description: 'A modern website prototype built around visual storytelling and interaction-first sections.',
-    tags: ['JavaScript', 'Frontend'],
-    github: 'https://github.com/juliank1m/gyl-website-prototype',
-    liveDemo: 'https://gyl-website-prototype.vercel.app',
-    previewSrc: 'https://gyl-website-prototype.vercel.app',
-    theme: 'rose',
   },
   {
     id: 'willowbrook-project',
