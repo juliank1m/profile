@@ -4,9 +4,10 @@ import { ButtonLink } from '../components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card'
 import { Separator } from '../components/ui/separator'
 import { DevpostIcon, EmailIcon, GitHubIcon, LinkedInIcon, RocketIcon } from '../components/Icons'
+import { projects } from '../data/projects'
 import './Home.css'
 
-const skills = ['React', 'TypeScript', 'Java', 'Python', 'SQL', 'C#', 'Flask', 'AWS (learning)']
+const skills = ['React', 'TypeScript', 'Python', 'SQL', 'C', 'C++']
 
 const strengths = [
   {
@@ -24,9 +25,9 @@ const strengths = [
 ]
 
 const highlights = [
-  { label: 'Projects shipped', value: '5+' },
-  { label: 'Primary stack', value: 'React + TS' },
-  { label: 'Focus area', value: 'Full-stack apps' },
+  { label: 'Projects shipped', value: `${projects.length}` },
+  { label: 'Primary stack', value: 'Python + TS' },
+  { label: 'Focus area', value: 'Backend + AI' },
 ]
 
 export default function Home() {
@@ -37,7 +38,7 @@ export default function Home() {
           <Badge tone="accent">Software Engineer in Progress</Badge>
           <h1>Designing software that feels intentional, reliable, and production-ready.</h1>
           <CardDescription>
-            I am Julian Kim, a Software Engineering student at the University of Waterloo building full-stack products with practical architecture and clear user value.
+            I am Julian Kim, a Software Engineering student at the University of Waterloo building full-stack products end-to-end.
           </CardDescription>
         </CardHeader>
 
