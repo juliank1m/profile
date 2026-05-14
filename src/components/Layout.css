@@ -116,14 +116,15 @@ body.cursor-custom .project-link-card * {
 .brand-mark {
   width: 2rem;
   aspect-ratio: 1;
-  border: 3px solid #f3cf73;
-  border-radius: 0;
-  display: grid;
-  place-items: center;
-  font-family: 'Silkscreen', monospace;
-  font-size: 0.56rem;
-  background: #fff6d6;
-  color: #826f31;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
 }
 
 .brand-copy {

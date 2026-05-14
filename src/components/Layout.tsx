@@ -65,7 +65,9 @@ export default function Layout() {
 
       <header className="topbar">
         <NavLink to="/homepage" className="brand">
-          <span className="brand-mark">JK</span>
+          <span className="brand-mark" aria-hidden="true">
+            <img src="/icons/favicon-192.png" alt="" />
+          </span>
           <span className="brand-copy">
             <strong>Julian Kim</strong>
             <span>Software Engineer</span>
