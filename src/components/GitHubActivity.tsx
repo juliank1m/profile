@@ -29,8 +29,6 @@ type ActivitySnapshot = {
 const SNAPSHOT = activityData as ActivitySnapshot
 
 const HUES: Tile['hue'][] = ['teal', 'lilac', 'coral', 'gold']
-const CHART_HEIGHT = 96
-const BAR_MIN = 6
 
 export default function GitHubActivity() {
   const a = SNAPSHOT
@@ -81,20 +79,18 @@ export default function GitHubActivity() {
             peak {monthlyMax.label.toUpperCase()} · {monthlyMax.count}
           </em>
         </div>
-        <div
-          className="gh-stats-bars-grid"
-          style={{ ['--chart-h' as string]: `${CHART_HEIGHT}px` }}
-        >
+        <div className="gh-stats-bars-grid">
           {a.monthly.map((m, idx) => {
             const hue = HUES[idx % HUES.length]
             const ratio = m.count / maxMonthly
-            const height = Math.round(ratio * (CHART_HEIGHT - BAR_MIN)) + BAR_MIN
+            const valuePct = Math.max(ratio, m.count > 0 ? 0.06 : 0.04) * 100
             return (
               <div className="gh-stats-bar-col" key={m.key}>
+                <span className="gh-stats-bar-month">{m.label}</span>
                 <div className="gh-stats-bar-track">
                   <div
                     className={`gh-stats-bar gh-hue-${hue}`}
-                    style={{ height: `${height}px` }}
+                    style={{ ['--bar-value' as string]: `${valuePct}%` }}
                     title={`${m.count} contributions in ${m.label}`}
                   >
                     <span className="gh-stats-bar-value">
@@ -102,7 +98,7 @@ export default function GitHubActivity() {
                     </span>
                   </div>
                 </div>
-                <span className="gh-stats-bar-label">{m.label}</span>
+                <span className="gh-stats-bar-count">{m.count}</span>
               </div>
             )
           })}
