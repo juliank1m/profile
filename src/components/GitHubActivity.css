@@ -17,7 +17,7 @@
 
 .gh-stats-label {
   font-family: 'Silkscreen', monospace;
-  font-size: 0.5rem;
+  font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #5c5478;
@@ -25,7 +25,7 @@
 
 .gh-stats-link {
   font-family: 'Silkscreen', monospace;
-  font-size: 0.48rem;
+  font-size: 0.58rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #4e5f8f;
@@ -106,7 +106,7 @@
 
 .gh-stats-tile span {
   font-family: 'Silkscreen', monospace;
-  font-size: 0.44rem;
+  font-size: 0.56rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--hue-ink);
@@ -126,7 +126,7 @@
   justify-content: space-between;
   gap: 0.5rem;
   font-family: 'Silkscreen', monospace;
-  font-size: 0.44rem;
+  font-size: 0.56rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #7e759f;
@@ -137,7 +137,7 @@
 .gh-stats-bars-rule em {
   font-style: normal;
   color: #5c5478;
-  font-size: 0.4rem;
+  font-size: 0.52rem;
 }
 
 .gh-stats-bars-grid {
@@ -179,11 +179,11 @@
 
 .gh-stats-bar-value {
   position: absolute;
-  top: -0.85rem;
+  top: -0.95rem;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Silkscreen', monospace;
-  font-size: 0.4rem;
+  font-size: 0.5rem;
   color: var(--hue-ink);
   white-space: nowrap;
   opacity: 0;
@@ -196,7 +196,7 @@
 
 .gh-stats-bar-label {
   font-family: 'Silkscreen', monospace;
-  font-size: 0.4rem;
+  font-size: 0.52rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #7e759f;
@@ -208,24 +208,24 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  gap: 0.6rem;
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   color: #5c5478;
-  padding-top: 0.25rem;
+  padding-top: 0.3rem;
   border-top: 2px dotted #d4c5f0;
 }
 
 .gh-stats-meta b {
   font-family: 'Silkscreen', monospace;
-  font-size: 0.58rem;
+  font-size: 0.68rem;
   letter-spacing: 0.02em;
   color: #2f8273;
 }
 
 .gh-stats-meta-divider {
   color: #b6aee8;
-  font-size: 0.5rem;
+  font-size: 0.58rem;
 }
 
 /* ---------- Responsive ---------- */
@@ -244,7 +244,7 @@
   }
 
   .gh-stats-bar-label {
-    font-size: 0.36rem;
+    font-size: 0.46rem;
   }
 }
 
@@ -266,16 +266,16 @@
   }
 
   .gh-stats-bar-label {
-    font-size: 0.34rem;
+    font-size: 0.42rem;
   }
 
   .gh-stats-meta {
-    font-size: 0.66rem;
+    font-size: 0.72rem;
     gap: 0.4rem;
   }
 
   .gh-stats-meta b {
-    font-size: 0.5rem;
+    font-size: 0.58rem;
   }
 }
 
