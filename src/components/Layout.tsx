@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import PixelTrail from './PixelTrail'
+import PixelPet from './PixelPet'
 import './Layout.css'
 
 const labels = ["available for summer '26 internships", 'full-stack | AI', 'software eng @ uwaterloo']
@@ -83,6 +84,15 @@ export default function Layout() {
           </NavLink>
         </nav>
       </header>
+
+      <div className="pet-strip">
+        {isFinePointerDevice ? (
+          <>
+            <PixelPet />
+            <div className="pet-ground" aria-hidden="true" />
+          </>
+        ) : null}
+      </div>
 
       <div className="ticker" aria-hidden="true">
         <div className="ticker-track">

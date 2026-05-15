@@ -1,0 +1,70 @@
+.pixel-pet {
+  position: absolute;
+  bottom: 2px;
+  left: 60px;
+  width: 36px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  z-index: 5;
+  cursor: pointer;
+  transition: left 1.4s linear, transform 80ms;
+  image-rendering: pixelated;
+}
+
+.pixel-pet svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.pixel-pet.face-left { --flip: scaleX(-1); transform: scaleX(-1); }
+.pixel-pet.face-right { --flip: scaleX(1); transform: scaleX(1); }
+
+.pixel-pet.jump { animation: petJump 480ms steps(6, end); }
+
+@keyframes petJump {
+  0% { transform: translateY(0) var(--flip, scaleX(1)); }
+  50% { transform: translateY(-22px) var(--flip, scaleX(1)); }
+  100% { transform: translateY(0) var(--flip, scaleX(1)); }
+}
+
+.pet-speech {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -6px);
+  background: white;
+  border: 2px solid var(--line);
+  padding: 5px 9px;
+  font-family: 'Silkscreen', monospace;
+  font-size: 11px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 6;
+  opacity: 0;
+  transition: opacity 160ms;
+}
+
+.pet-speech.show { opacity: 1; }
+
+.pet-speech::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--line);
+}
+
+@media (max-width: 720px) {
+  .pixel-pet { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-pet { transition: none; }
+  .pixel-pet.jump { animation: none; }
+}

@@ -88,9 +88,27 @@ body.cursor-custom .project-link-card * {
 
 .topbar,
 .site-main,
-.ticker {
+.ticker,
+.pet-strip {
   position: relative;
   z-index: 2;
+}
+
+.pet-strip {
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 2.6rem;
+}
+
+.pet-ground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, #b6e8a6 0 4px, #cdf4be 4px 8px);
+  border-top: 2px solid #8adfce;
+  image-rendering: pixelated;
 }
 
 .topbar {
@@ -171,7 +189,7 @@ body.cursor-custom .project-link-card * {
 
 .ticker {
   max-width: 1080px;
-  margin: 0.65rem auto 0;
+  margin: 0 auto;
   border: 3px solid var(--line);
   border-radius: 0;
   overflow: hidden;
@@ -251,6 +269,10 @@ body.cursor-custom .project-link-card * {
 
   .topbar {
     padding: 0.45rem;
+  }
+
+  .pet-strip {
+    height: 1.4rem;
   }
 
   .brand-copy span {
