@@ -1,0 +1,65 @@
+.float-win.term {
+  width: 310px;
+  background: #1a1830;
+  border-color: #5c5478;
+  box-shadow: 5px 5px 0 #3b3552;
+}
+
+.float-win.term .fw-bar {
+  background: #3b3552;
+  color: #cdf4be;
+}
+
+.float-win.term .fw-min {
+  background: #3b3552;
+  color: #cdf4be;
+  border-color: #3b3552;
+}
+
+.float-win.term .fw-min:hover {
+  background: #cdf4be;
+  color: #1a1830;
+}
+
+.fw-term-body {
+  padding: 11px 13px 13px;
+  font-family: 'Silkscreen', monospace;
+  font-size: 11px;
+  color: #cdf4be;
+  line-height: 1.55;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.fw-term-body::-webkit-scrollbar { width: 7px; }
+.fw-term-body::-webkit-scrollbar-thumb { background: #5c5478; }
+
+.fw-term-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.fw-term-line.user { color: #ffc1ba; }
+.fw-term-line.sys { color: #9bb5f7; }
+.fw-term-line.err { color: #ffb3a0; }
+
+.fw-term-input-row {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.fw-term-prompt { color: #ffc1ba; }
+
+.fw-term-input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-family: 'Silkscreen', monospace;
+  font-size: 11px;
+  flex: 1;
+  padding: 0;
+  caret-color: #cdf4be;
+}

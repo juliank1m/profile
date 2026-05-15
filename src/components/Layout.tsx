@@ -4,6 +4,8 @@ import PixelTrail from './PixelTrail'
 import PixelPet from './PixelPet'
 import FloatingWindow from './FloatingWindow'
 import WindowDock from './WindowDock'
+import MusicPlayer from './MusicPlayer'
+import Terminal from './Terminal'
 import './Layout.css'
 
 const labels = ["available for summer '26 internships", 'full-stack | AI', 'software eng @ uwaterloo']
@@ -81,6 +83,8 @@ export default function Layout() {
   const { openMap, toggle } = useWindowOpenState({
     clock: false,
     sticky: false,
+    music: false,
+    term: false,
   })
 
   useEffect(() => {
@@ -207,10 +211,36 @@ export default function Layout() {
             <StickyContent />
           </FloatingWindow>
 
+          <FloatingWindow
+            id="music"
+            title="MUSIC.EXE"
+            defaultX={24}
+            defaultY={360}
+            variant="music"
+            open={openMap.music}
+            onMinimize={() => toggle('music')}
+          >
+            <MusicPlayer />
+          </FloatingWindow>
+
+          <FloatingWindow
+            id="term"
+            title="TERM.SH"
+            defaultX={viewportWidth - 340}
+            defaultY={420}
+            variant="term"
+            open={openMap.term}
+            onMinimize={() => toggle('term')}
+          >
+            <Terminal />
+          </FloatingWindow>
+
           <WindowDock
             items={[
               { id: 'clock', label: 'CLOCK' },
               { id: 'sticky', label: 'NOTE' },
+              { id: 'music', label: 'MUSIC' },
+              { id: 'term', label: 'TERM' },
             ]}
             openMap={openMap}
             onToggle={toggle}
