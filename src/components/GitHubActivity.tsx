@@ -55,7 +55,6 @@ export default function GitHubActivity() {
     return () => controller.abort()
   }, [])
 
-  const restrictedContributions = a.restrictedContributions ?? 0
   const tiles: Tile[] = [
     {
       label: 'Total',
@@ -76,10 +75,10 @@ export default function GitHubActivity() {
       title: 'Pull request contributions reported by GitHub',
     },
     {
-      label: 'Private',
-      value: restrictedContributions,
+      label: 'Repos',
+      value: a.totalRepositories,
       hue: 'gold',
-      title: 'Restricted private contributions included in the GitHub total',
+      title: 'Repositories with commit contributions reported by GitHub',
     },
   ]
 
@@ -165,12 +164,6 @@ export default function GitHubActivity() {
         </span>
         <span>
           <b>{a.activeDays}</b> active days
-        </span>
-        <span className="gh-stats-meta-divider" aria-hidden="true">
-          ◆
-        </span>
-        <span>
-          <b>{a.totalRepositories}</b> repos
         </span>
       </footer>
     </section>
